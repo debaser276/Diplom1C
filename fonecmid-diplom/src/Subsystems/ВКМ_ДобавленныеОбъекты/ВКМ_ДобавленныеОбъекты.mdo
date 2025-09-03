@@ -7,5 +7,7 @@
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Constant.ВКМ_ТокенТелеграм</content>
+  <content>Constant.ВКМ_ЧатИДТелеграм</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
 </mdclass:Subsystem>
