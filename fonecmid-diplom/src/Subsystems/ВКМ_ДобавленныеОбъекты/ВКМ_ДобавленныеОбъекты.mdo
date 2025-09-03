@@ -9,5 +9,6 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Constant.ВКМ_ТокенТелеграм</content>
   <content>Constant.ВКМ_ЧатИДТелеграм</content>
+  <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
 </mdclass:Subsystem>
