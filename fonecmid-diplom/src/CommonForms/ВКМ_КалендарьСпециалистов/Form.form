@@ -36,6 +36,10 @@
         <event>BeforeCreate</event>
         <name>ПланировщикПередСозданием</name>
       </handlers>
+      <handlers>
+        <event>BeforeStartEdit</event>
+        <name>ПланировщикПередНачаломРедактирования</name>
+      </handlers>
       <width>50</width>
       <autoMaxWidth>true</autoMaxWidth>
       <height>10</height>
