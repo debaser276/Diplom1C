@@ -10,5 +10,7 @@
   <content>Constant.ВКМ_ТокенТелеграм</content>
   <content>Constant.ВКМ_ЧатИДТелеграм</content>
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
+  <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
+  <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
 </mdclass:Subsystem>
