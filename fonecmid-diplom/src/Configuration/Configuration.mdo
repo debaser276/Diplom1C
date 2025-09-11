@@ -801,8 +801,8 @@
   <commonModules>CommonModule.РаботаСФайламиВТомахСлужебный</commonModules>
   <commonModules>CommonModule.РаботаСФайламиКлиент</commonModules>
   <commonModules>CommonModule.РаботаСФайламиКлиентПереопределяемый</commonModules>
-  <commonModules>CommonModule.РаботаСФайламиКлиентСервер</commonModules>
   <commonModules>CommonModule.РаботаСФайламиПереопределяемый</commonModules>
+  <commonModules>CommonModule.РаботаСФайламиКлиентСервер</commonModules>
   <commonModules>CommonModule.РаботаСФайламиСлужебный</commonModules>
   <commonModules>CommonModule.РаботаСФайламиСлужебныйВызовСервера</commonModules>
   <commonModules>CommonModule.РаботаСФайламиСлужебныйКлиент</commonModules>
@@ -883,6 +883,7 @@
   <commonModules>CommonModule.ФизическиеЛицаКлиентСервер</commonModules>
   <commonModules>CommonModule.ФизическиеЛицаКлиентСерверЛокализация</commonModules>
   <commonModules>CommonModule.ВКМ_Телеграм</commonModules>
+  <commonModules>CommonModule.ВКМ_МассовоеСозданиеРеализаций</commonModules>
   <exchangePlans>ExchangePlan.ОбновлениеИнформационнойБазы</exchangePlans>
   <xDTOPackages>XDTOPackage.ApdexExport</xDTOPackages>
   <xDTOPackages>XDTOPackage.ApdexExport_1_0_0_2</xDTOPackages>
@@ -1316,6 +1317,7 @@
   <dataProcessors>DataProcessor.Сканирование</dataProcessors>
   <dataProcessors>DataProcessor.УдалениеПомеченныхОбъектов</dataProcessors>
   <dataProcessors>DataProcessor.УправлениеИтогамиИАгрегатами</dataProcessors>
+  <dataProcessors>DataProcessor.ВКМ_МассовоеСозданиеАктов</dataProcessors>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанных</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</informationRegisters>
   <informationRegisters>InformationRegister.ВерсииПодсистем</informationRegisters>
