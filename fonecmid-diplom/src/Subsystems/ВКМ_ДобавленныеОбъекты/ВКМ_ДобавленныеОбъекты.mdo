@@ -12,5 +12,7 @@
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
   <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
+  <content>Role.ВКМ_МассовоеСозданиеАктов</content>
+  <content>Role.ВКМ_ДобавлениеИзменениеДокументовОбслуживаниеКлиента</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
 </mdclass:Subsystem>
