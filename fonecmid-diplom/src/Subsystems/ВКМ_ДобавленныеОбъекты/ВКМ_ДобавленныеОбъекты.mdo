@@ -15,4 +15,5 @@
   <content>Role.ВКМ_МассовоеСозданиеАктов</content>
   <content>Role.ВКМ_ДобавлениеИзменениеДокументовОбслуживаниеКлиента</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
+  <subsystems>РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
