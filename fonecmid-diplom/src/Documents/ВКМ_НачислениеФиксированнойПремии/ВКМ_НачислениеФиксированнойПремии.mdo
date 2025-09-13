@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ac9d1f86-083c-40ed-98a1-7642ffe3094e">
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ac9d1f86-083c-40ed-98a1-7642ffe3094e">
   <producedTypes>
     <objectType typeId="54b65018-1a6e-4bd5-ad25-39fc36504ee0" valueTypeId="c0389a0e-4b04-4b08-a9ce-b0da49b3f499"/>
     <refType typeId="42e090e9-4b50-49a3-825f-4adc74c14b45" valueTypeId="299da854-4693-47d9-95a9-c1017be659ab"/>
@@ -23,7 +23,52 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <realTimePosting>Deny</realTimePosting>
   <registerRecords>CalculationRegister.ВКМ_ДополнительныеНачисления</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="ebce1fec-5986-4ee7-820c-e26ae18630e8">
+    <producedTypes>
+      <objectType typeId="bdda30ae-875e-4d03-b32a-a00487849b30" valueTypeId="f6e60b78-cab2-4eca-8696-ab90490da816"/>
+      <rowType typeId="cce2c684-226f-4342-810b-91ac0425f569" valueTypeId="448e5fc4-e70c-409a-9dfc-b4c7c53014ff"/>
+    </producedTypes>
+    <name>СотрудникиСПремией</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудники с премией</value>
+    </synonym>
+    <attributes uuid="f6d7c4f9-3b8c-4f4c-a278-b8768c4a67c3">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6b3db2d7-9aff-4359-b5b4-800d430fa8ab">
+      <name>СуммаПремии</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма премии</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

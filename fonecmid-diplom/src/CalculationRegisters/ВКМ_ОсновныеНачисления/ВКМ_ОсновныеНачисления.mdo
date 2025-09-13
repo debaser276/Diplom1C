@@ -40,6 +40,38 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
+  <resources uuid="28bec452-00ac-4374-b36f-f398996706ca">
+    <name>РезультатРабочихДней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат рабочих дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="c6831538-2dd1-4ec9-a68e-92a7c42bac1a">
+    <name>Параметр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметр</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
   <dimensions uuid="fcf49c8c-14c2-42d0-93c9-a0300b427eca">
     <name>Сотрудник</name>
     <synonym>
@@ -52,5 +84,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
+    <baseDimension>true</baseDimension>
   </dimensions>
 </mdclass:CalculationRegister>
