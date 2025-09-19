@@ -14,6 +14,10 @@
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Role.ВКМ_МассовоеСозданиеАктов</content>
   <content>Role.ВКМ_ДобавлениеИзменениеДокументовОбслуживаниеКлиента</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>Report.ВКМ_РасчетыССотрудниками</content>
+  <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <subsystems>ОбслуживаниеКлентов</subsystems>
   <subsystems>РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
