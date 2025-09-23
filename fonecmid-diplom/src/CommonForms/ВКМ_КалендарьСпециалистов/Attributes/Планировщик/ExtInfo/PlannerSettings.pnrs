@@ -62,4 +62,5 @@
     <begin>2025-09-04T00:00:00</begin>
     <end>2025-09-04T23:59:59</end>
   </periods>
+  <itemsBehaviorWhenSpaceInsufficient>ShowAllItems</itemsBehaviorWhenSpaceInsufficient>
 </planner:PlannerSettings>
