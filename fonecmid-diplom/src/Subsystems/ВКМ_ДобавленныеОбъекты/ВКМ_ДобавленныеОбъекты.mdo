@@ -21,6 +21,6 @@
   <content>Role.ВКМ_ОтчетОВыработке</content>
   <content>Role.ВКМ_ОтчетОВыставленныхАктах</content>
   <content>Role.ВКМ_ОтчетыЗарплатные</content>
-  <subsystems>ОбслуживаниеКлентов</subsystems>
+  <subsystems>ОбслуживаниеКлиентов</subsystems>
   <subsystems>РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
