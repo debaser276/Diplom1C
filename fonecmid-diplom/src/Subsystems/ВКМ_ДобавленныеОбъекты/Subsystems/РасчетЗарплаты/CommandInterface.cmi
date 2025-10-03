@@ -12,10 +12,10 @@
   <commandsOrder>
     <orderFragments>
       <group>NavigationPanelImportant</group>
-      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
-      <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_НачислениеЗарплаты.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_НачислениеФиксированнойПремии.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
     </orderFragments>
     <orderFragments>
       <group>ActionsPanelCreate</group>

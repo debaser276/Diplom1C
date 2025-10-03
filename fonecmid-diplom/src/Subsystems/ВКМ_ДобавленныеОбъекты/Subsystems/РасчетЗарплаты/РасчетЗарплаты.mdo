@@ -26,5 +26,6 @@
   <content>Document.ВКМ_ГрафикОтпусков</content>
   <content>Role.ВКМ_ДобавлениеИзменениеЗарплатныхДокументов</content>
   <content>AccumulationRegister.ВКМ_ДниОтпускаСотрудников</content>
+  <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <parentSubsystem>Subsystem.ВКМ_ДобавленныеОбъекты</parentSubsystem>
 </mdclass:Subsystem>

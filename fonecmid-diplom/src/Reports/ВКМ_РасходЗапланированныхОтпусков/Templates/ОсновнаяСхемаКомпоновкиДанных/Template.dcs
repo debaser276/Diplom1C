@@ -9,6 +9,13 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Сотрудник</dataPath>
 			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год</dataPath>
+			<field>Год</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ОтпускПлан</dataPath>
@@ -30,33 +37,26 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Год</dataPath>
-			<field>Год</field>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВКМ_ДниОтпускаСотрудниковОбороты.Сотрудник КАК Сотрудник,
-	ВКМ_ДниОтпускаСотрудниковОбороты.КоличествоДнейОборот КАК КоличествоДнейОборот
+	ВКМ_ДниОтпускаСотрудниковОбороты.КоличествоДнейОборот КАК КоличествоДней
 ПОМЕСТИТЬ вт_ОтпускПлан
 ИЗ
-	РегистрНакопления.ВКМ_ДниОтпускаСотрудников.Обороты КАК ВКМ_ДниОтпускаСотрудниковОбороты
-
-ИНДЕКСИРОВАТЬ ПО
-	Сотрудник
+	РегистрНакопления.ВКМ_ДниОтпускаСотрудников.Обороты(,,, Год = &amp;Год) КАК ВКМ_ДниОтпускаСотрудниковОбороты
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	вт_ОтпускПлан.Сотрудник КАК Сотрудник,
-	МАКСИМУМ(вт_ОтпускПлан.КоличествоДнейОборот) КАК ОтпускПлан,
+	вт_ОтпускПлан.Сотрудник,
+	МАКСИМУМ(вт_ОтпускПлан.КоличествоДней) КАК ОтпускПлан,
 	СУММА(ЕСТЬNULL(ВКМ_ОсновныеНачисления.РезультатДнейОтпуска, 0)) КАК ОтпускФакт
 ИЗ
 	вт_ОтпускПлан КАК вт_ОтпускПлан
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрРасчета.ВКМ_ОсновныеНачисления КАК ВКМ_ОсновныеНачисления
 		ПО вт_ОтпускПлан.Сотрудник = ВКМ_ОсновныеНачисления.Сотрудник
-ГДЕ
-	ВКМ_ОсновныеНачисления.ВидРасчета = &amp;ВидРасчета
+		И ВКМ_ОсновныеНачисления.ВидРасчета = &amp;ВидРасчета
+		И ГОД(ВКМ_ОсновныеНачисления.ПериодРегистрации) = &amp;Год
 СГРУППИРОВАТЬ ПО
 	вт_ОтпускПлан.Сотрудник</query>
 	</dataSet>
@@ -75,7 +75,6 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаНачала</expression>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -92,7 +91,27 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Год</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>ВидРасчета</name>
@@ -108,28 +127,12 @@
 		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ВКМ_ОсновныеНачисления.Отпуск</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
-	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>v8:StandardPeriod</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-		<denyIncompleteValues>true</denyIncompleteValues>
-		<use>Always</use>
-	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Расход запланировванных отпусков</v8:content>
+				<v8:content>Расход запланированных отпусков</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -146,13 +149,35 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
-					</dcscor:value>
-					<dcsset:userSettingID>0ca34b6f-a491-4a95-8b36-91230a73a0f0</dcsset:userSettingID>
+					<dcscor:parameter>Год</dcscor:parameter>
+					<dcsset:userSettingID>2dd60344-5041-47ad-87be-832eeefbb06a</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
