@@ -172,7 +172,6 @@
       <name>СписокДоговоровКоманднаяПанель</name>
       <id>6</id>
       <horizontalAlign>Left</horizontalAlign>
-      <autoFill>true</autoFill>
     </autoCommandBar>
     <searchStringAddition>
       <name>СписокДоговоровСтрокаПоиска</name>
