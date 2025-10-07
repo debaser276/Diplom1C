@@ -13,13 +13,14 @@
   <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Role.ВКМ_МассовоеСозданиеАктов</content>
-  <content>Role.ВКМ_ДобавлениеИзменениеДокументовОбслуживаниеКлиента</content>
+  <content>Role.ВКМ_ПроведениеДокументовОбслуживаниеКлиента</content>
   <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_РасчетыССотрудниками</content>
   <content>Role.ВКМ_ОтчетОВыработке</content>
   <content>Role.ВКМ_ОтчетОВыставленныхАктах</content>
   <content>Role.ВКМ_ОтчетыЗарплатные</content>
+  <content>Role.ВКМ_ДобавлениеДокументовОбслуживаниеКлиента</content>
   <subsystems>ОбслуживаниеКлиентов</subsystems>
   <subsystems>РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
